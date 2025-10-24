@@ -20,4 +20,27 @@ print(total)
 
 
 
+'''my_fruit = ['apple', 'banana', 'mango', 'banana', 'apple', 'banana']
+counting = Counter(my_fruit)
 
+print(counting.most_common(1))
+print(counting)
+
+
+for fruit in counting:
+  if counting[fruit] > 1:
+    print("Greater than 1")
+  else:
+    print("Not Greated than 1")
+'''
+
+'''
+letter = input()
+counted = Counter(list(letter))
+
+
+for letters in counted:
+  if counted[letters] > 1:
+    print(f"{letters}: {counted[letters]}")
+
+print(counted.most_common(1))'''
