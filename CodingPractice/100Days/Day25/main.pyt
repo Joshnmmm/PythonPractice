@@ -9,7 +9,8 @@ with open("weather_data.csv") as data_file:
 print(temperatures)'''
 
 import pandas 
-data = pandas.read_csv("weather_data.csv")
+data = pandas.read_csv("squireldata.csv")
+#data = pandas.read_csv("weather_data.csv")
 
 
 '''#print(data["day"])
@@ -27,9 +28,7 @@ print(data["temp"].max())
 tempList = data["temp"].to_list()  #converting series it to list 
 average = sum(tempList) / len(tempList)
 print(average)'''
-
-
-#print(data[data.temp == 14]) #printing a row with a data on that column 
+'''#print(data[data.temp == 14]) #printing a row with a data on that column 
 
 print(data[data.temp == data.temp.max()])
 
@@ -40,6 +39,30 @@ temp = monday_data.temp  #printing the temperature only of the monday row nice
 def celToFar(temp):
   return (temp* 9/5 ) + 32
 
-print(celToFar(temp))
+print(celToFar(temp))'''
+
+
+gray = 0 
+cinnamon = 0 
+black = 0 
+
+
+grayFurColor = data[data.PrimaryFurColor == "Gray"]
+cinnamonFurColor = data[data.PrimaryFurColor == "Cinnamon"]
+blackFurColor = data[data.PrimaryFurColor == "Black"]
+
+
+
+gCount =len(grayFurColor)
+cCount =len(cinnamonFurColor)
+bCount =len(blackFurColor)
+
+
+
+data_dict = {
+  "Fur Color:": ["Gray", "Cinnamon", "Black"],
+  "Count": [gCount, cCount, bCount]
+}
+
 
 
