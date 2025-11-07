@@ -1,20 +1,32 @@
-import tkinter 
+from tkinter import *
+# import tkinter -> this imports class so tkinter.Tk() or tkinter.Button etc etc
 
-window = tkinter.Tk() #main opening
+window = Tk() #main opening
 window.title("This is my first GUI NICE")
 window.minsize(width=500, height=300) #panel sizing
 
 
 #Label 
 
-
-var_label = tkinter.Label(text="This is a label", font=("Arial", 24, "italic"))
-var_label.pack(side="bottom") # this place it in the screen + center it
-
-
+def on_click():
+  new_text = input.get()
+  var_label["text"] = new_text   #super straightforward, input.get gets userinput then assign it to a variable or smth nice
 
 
+var_label = Label(text="This is a label", font=("Arial", 24, "italic"))
+var_label.pack() # this place it in the screen + center it
 
+
+var_label["text"] = "New Text"
+
+#button 
+button = Button(text ="Click Me", command=on_click)
+button.pack()
+
+#Entry  
+
+input = Entry(width=10)
+input.pack()
 
 
 
