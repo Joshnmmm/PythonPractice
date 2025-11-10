@@ -7,6 +7,8 @@ soup = BeautifulSoup(response.text, "html.parser")
 # Each title is inside a span with class "titleline"
 articles = soup.find_all("span", class_="titleline")
 
+print(arti)
+
 for article in articles:
     link_tag = article.find("a")
     title = link_tag.get_text()
