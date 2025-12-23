@@ -18,7 +18,6 @@ def deleteTask():
 
 
 
-
 lists = Listbox()
 lists.pack()
 
